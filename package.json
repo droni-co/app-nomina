@@ -11,6 +11,8 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.10.3",
+    "@sidebase/nuxt-auth": "^0.6.3",
+    "next-auth": "4.21.1",
     "nuxt": "^3.9.0",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
