@@ -10,4 +10,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [ ] Implement Store
 - [x] Server Side Init
 - [x] Auth - with google
+- [ ] Layout
+- [ ] Login Page
+- [ ] Abbout and Pricing
 
