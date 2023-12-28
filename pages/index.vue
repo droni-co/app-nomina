@@ -1,9 +1,10 @@
 <template>
   <div class="container mx-auto">
     <h1>Hello World</h1>
-    {{ status }}
-    <hr>
-    {{ data }}
+    <pre>
+      hola
+      {{ users}}
+    </pre>
     <NuxtLink to="/login">
       <UiAction class="inline-block">
         Login
@@ -20,4 +21,5 @@ data.value // Session data, e.g., expiration, user.email, ...
 const closeSession = () => {
   signOut()
 }
+const { data:users } = await useFetch(`/api/users/index`)
 </script>
