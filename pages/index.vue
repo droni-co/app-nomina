@@ -1,9 +1,11 @@
 <template>
   <div class="container mx-auto">
     <h1>Hello World</h1>
+    {{ status }}
+    {{ data }}
     <pre>
       hola
-      {{ users}}
+      {{ users }}
     </pre>
     <NuxtLink to="/login">
       <UiAction class="inline-block">
