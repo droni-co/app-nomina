@@ -13,9 +13,9 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [ ] Layout
 - [ ] Login Page
 - [ ] Abbout and Pricing
-- [ ] Backend and MER
-- [ ] ORM
-- [ ] Database
+- [x] Backend and MER
+- [x] ORM
+- [x] Database
 
 
 ## MER
