@@ -8,7 +8,7 @@ export class Worker {
   id?: number
 
   @Column({ type: 'int' })
-  company_id?: number
+  companyId?: number
 
   @Column({ type: 'varchar', length: 100 })
   name!: string

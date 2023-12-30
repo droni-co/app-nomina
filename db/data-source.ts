@@ -9,9 +9,9 @@ const AppDataSource = new DataSource({
   port: 3306,
   username: "dev",
   password: "dev01",
-  database: "nomina",
+  database: "Nomina",
   synchronize: false,
-  logging: true,
+  logging: false,
   entities: [User, Company, Worker]
 })
 

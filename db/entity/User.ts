@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 import { Company } from "./Company"
 
 @Entity()
@@ -10,7 +10,7 @@ export class User {
   name!: string
 
   @Column({ type: 'varchar', length: 100 })
-  email!: string
+  email?: string
 
   @Column({ type: 'varchar', length: 255 })
   avatar?: string
@@ -22,5 +22,6 @@ export class User {
   updated_at: Date | undefined
 
   @ManyToMany(() => Company, company => company.users)
+  @JoinTable({ name: 'company_users' })
   companies?: Company[]
 }

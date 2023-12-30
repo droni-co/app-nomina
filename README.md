@@ -7,15 +7,19 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [x] Ui folder components
 - [x] Base Scafold
 - [x] Layouts
-- [ ] Implement Store
+- [ ] Implemetar loading and toast
 - [x] Server Side Init
 - [x] Auth - with google
-- [ ] Layout
-- [ ] Login Page
+- [x] Layout
+- [x] Login Page
 - [ ] Abbout and Pricing
 - [x] Backend and MER
 - [x] ORM
 - [x] Database
+- [-] Crear compañias
+- [ ] Listar compañias
+- [ ] Crear trabajadores
+
 
 
 ## MER

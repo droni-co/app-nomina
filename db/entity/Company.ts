@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 import { User } from "./User"
 import { Worker } from "./Worker"
 
@@ -25,9 +25,6 @@ export class Company {
   @Column({ type: 'varchar', length: 100 })
   website?: string
 
-  @Column({ type: 'varchar', length: 100 })
-  logo?: string
-
   @CreateDateColumn({ name: 'created_at' })
   created_at: Date | undefined
 
@@ -35,6 +32,7 @@ export class Company {
   updated_at: Date | undefined
 
   @ManyToMany(() => User, user => user.companies)
+  @JoinTable({ name: 'company_users' })
   users?: User[]
 
   @OneToMany(() => Worker, worker => worker.company)

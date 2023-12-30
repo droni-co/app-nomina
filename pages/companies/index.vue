@@ -8,6 +8,7 @@
       <div class="col-span-2">
         <UiCard class="py-3 px-2">
           <h1>Create Company</h1>
+          <CompaniesCreate />
         </UiCard>
       </div>
     </div>
