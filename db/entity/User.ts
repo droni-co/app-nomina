@@ -1,5 +1,6 @@
-import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 import { Company } from "./Company"
+import { Enrollment } from "./Enrollment"
 
 @Entity()
 export class User {
@@ -9,11 +10,11 @@ export class User {
   @Column({ type: 'varchar', length: 100 })
   name!: string
 
-  @Column({ type: 'varchar', length: 100 })
+  @Column({ type: 'varchar', length: 100, unique: true })
   email?: string
 
   @Column({ type: 'varchar', length: 255 })
-  avatar?: string
+  image?: string
 
   @CreateDateColumn({ name: 'created_at' })
   created_at: Date | undefined
@@ -21,7 +22,6 @@ export class User {
   @UpdateDateColumn({ name: 'updated_at' })
   updated_at: Date | undefined
 
-  @ManyToMany(() => Company, company => company.users)
-  @JoinTable({ name: 'company_users' })
-  companies?: Company[]
+  @OneToMany(() => Enrollment, enrollment => enrollment.user)
+  enrollments?: Enrollment[]
 }

@@ -11,8 +11,8 @@ export default defineEventHandler(async (event) => {
 
   const companies = (await Init).getRepository(Company)
   .createQueryBuilder("company")
-  .leftJoinAndSelect("company.users", "users")
-  .where("users.id = :id", { id: dbuser.id })
+  .leftJoinAndSelect("company.enrollments", "enrollments")
+  .where("enrollments.userId = :userId", { userId: dbuser.id })
   .getMany()
   
   return companies

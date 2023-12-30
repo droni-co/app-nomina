@@ -29,7 +29,7 @@ export default NuxtAuthHandler({
           const bodyUser = new User()
           bodyUser.name = token.name
           bodyUser.email = token.email
-          bodyUser.avatar = String(token.picture)
+          bodyUser.image = String(token.picture)
           const nuser = await (await Init).getRepository(User).save(bodyUser)
           ;(session as any).dbuser = nuser;
         }
