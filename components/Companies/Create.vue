@@ -57,14 +57,10 @@ const newCompany:Company = ref({
 })
 
 const createCompany = async () => {
-  await useFetch<Company>('/api/companies', {
+  const { data } = await useFetch<Company>('/api/companies', {
     method: 'POST',
     body: JSON.stringify(newCompany.value)
-  }).then((res) => {
-    
-    console.log(res)
-    router.push(`/companies/${res.id}`)
   })
-  
+  console.log(data)
 }
 </script>

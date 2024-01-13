@@ -18,8 +18,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [x] Database
 - [-] Crear compañias
 - [ ] Listar compañias
-- [ ] Crear trabajadores (Masivo)
-- [ ] Middleware Auth
+- [ ] Crear trabajadores
 
 
 
